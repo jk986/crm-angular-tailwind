@@ -1,0 +1,27 @@
+<div class="md:flex md:min-h-screen">
+
+    <aside class="md:w-1/4 bg-blue-900 px-5 py-10">
+        <h2 class="text-4xl font-black text-center text-white"> CRM - Clientes</h2>
+        <nav class="mt-10">
+            <a 
+                class="text-2xl block mt-2 hover:text-blue-300 text-white" 
+                routerLink="/clientes"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}"
+                ariaCurrentWhenActive="page"
+            >Clientes</a>
+            <a 
+                class="text-2xl block mt-2 hover:text-blue-300 text-white" 
+                routerLink="/clientes/nuevo" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}"
+                ariaCurrentWhenActive="page"
+            >Nuevo Cliente</a>
+        </nav>
+    </aside>
+
+    <main class="md:w-3/4 p-10 md:h-screen overflow-scroll">
+        <router-outlet></router-outlet>
+    </main>
+
+</div>

@@ -1,0 +1,86 @@
+<form (ngSubmit)="onSubmit(formUser)" #formUser="ngForm">
+    <app-msg-error 
+        *ngIf="showError"
+        [errors]="errores"
+    ></app-msg-error>
+    <div class="mb-4">
+        <label
+            class="text-gray-800"
+            for="nombre"
+        >Nombre:</label>
+        <input 
+            id="nombre"
+            type="text"
+            class="mt-2 block w-full p-3 bg-gray-50"
+            [(ngModel)]="userData.nombre"
+            placeholder="Nombre del Cliente"
+            name="nombre"
+    
+        />
+    </div>
+    <div class="mb-4">
+        <label
+            class="text-gray-800"
+            for="empresa"
+        >Empresa:</label>
+        <input 
+            id="empresa"
+            type="text"
+            class="mt-2 block w-full p-3 bg-gray-50"
+            [(ngModel)]="userData.empresa"
+            placeholder="Empresa del Cliente"
+            name="empresa"
+        />
+    </div>
+    
+    <div class="mb-4">
+        <label
+            class="text-gray-800"
+            for="email"
+        >E-mail:</label>
+        <input 
+            id="email"
+            type="email"
+            class="mt-2 block w-full p-3 bg-gray-50"
+            [(ngModel)]="userData.email"
+            placeholder="Email del Cliente"
+            name="email"
+        />
+    </div>
+    
+    <div class="mb-4">
+        <label
+            class="text-gray-800"
+            for="telefono"
+        >Teléfono:</label>
+        <input 
+            id="telefono"
+            type="tel"
+            class="mt-2 block w-full p-3 bg-gray-50"
+            [(ngModel)]="userData.telefono"
+            placeholder="Teléfono del Cliente"
+            name="telefono"
+        />
+    </div>
+    
+    <div class="mb-4">
+        <label
+            class="text-gray-800"
+            for="notas"
+        >Notas:</label>
+        <textarea
+            id="notas"
+            type="text"
+            class="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
+            [(ngModel)]="userData.notas"
+            placeholder="Notas del Cliente"
+            name="notas"
+        ></textarea>
+    </div>
+    
+    <input 
+        type="submit" 
+        value="Registrar Cliente" 
+        class="mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg"
+    >
+</form>
